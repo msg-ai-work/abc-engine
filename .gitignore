@@ -1,0 +1,13 @@
+# Local Common Harness checkout
+.ai-harness/
+
+# Local secrets / environment
+.env
+.env.*
+secrets/
+credentials/
+
+# Logs / IDE
+*.log
+.idea/
+.vscode/

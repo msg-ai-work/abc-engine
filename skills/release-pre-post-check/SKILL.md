@@ -9,7 +9,7 @@ priority: top-3
 ## 목적
 배포 성공 여부를 프로세스 기동 여부가 아니라 **발송 성공률·TPS·Latency·Lag·Error·Retry·DLQ·연계 상태**로 판정한다.
 
-## 배포 전 Baseline
+## 입력 / 배포 전 Baseline
 - [ ] 변경 범위/영향 채널/대상 Component
 - [ ] API/Event/DB Schema 하위 호환성
 - [ ] 평시 TPS, P95/P99 Latency, Error율
@@ -18,7 +18,7 @@ priority: top-3
 - [ ] Rollback 절차와 판단 기준
 - [ ] Smoke용 비식별 테스트 데이터
 
-## 배포 후 순서
+## 절차 / 배포 후 순서
 1. Process/Pod/Instance Healthy를 확인한다.
 2. Smoke 발송을 수행하고 요청→결과까지 확인한다.
 3. 배포 전 Baseline과 TPS/Latency/Error를 비교한다.
@@ -38,7 +38,7 @@ priority: top-3
 - **Observe:** 일시 변동이 있으나 회복 추세이며 고객 영향 없음
 - **Rollback 후보:** Error/Lag/Retry가 지속 증가하거나 메시지 유실·중복 위험 존재
 
-## Evidence
+## 출력 / Evidence
 배포 버전, 시각, Baseline/After 수치, Smoke 결과, 이상 유무, 승인자 판단을 남긴다.
 
 ## Human Gate

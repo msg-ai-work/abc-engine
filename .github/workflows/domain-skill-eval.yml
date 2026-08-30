@@ -1,0 +1,33 @@
+name: Domain Skill Eval Structure
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'evals/**'
+      - 'scripts/validate-domain-evals.py'
+      - '.github/workflows/domain-skill-eval.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'evals/**'
+      - 'scripts/validate-domain-evals.py'
+
+permissions:
+  contents: read
+
+jobs:
+  domain-eval-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate Top3 Skill and Eval contracts
+        run: python scripts/validate-domain-evals.py

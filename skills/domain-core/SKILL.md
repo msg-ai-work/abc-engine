@@ -1,7 +1,8 @@
 ---
 name: engine-domain-core
 summary: 기업메시징 엔진 업무를 위한 운영·개발 Skill. SMS/MMS/RCS GW, 큐/브로커, 발송 처리, 재처리, 성능 및 장애 분석에 사용한다.
-owner-role: engine-domain-owner
+responsible-role: 담당자
+reviewer-role: Reviewer
 version: "0.1"
 migrated-from: msg-ai-work/abc/.kiro/skills/domains/engine/SKILL.md
 ---
